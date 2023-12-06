@@ -2,7 +2,7 @@ import openai
 import streamlit as st
 import pandas as pd
 
-st.header('Terminology to Thai')
+
 
 # Set up the sidebar
 st.sidebar.header('API Key')
