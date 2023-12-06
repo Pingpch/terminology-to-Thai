@@ -8,6 +8,10 @@ import pandas as pd
 st.sidebar.header('API Key')
 api_key = st.sidebar.text_input('Enter your API key')
 user_api_key = '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'
+"[Get an OpenAI API key](https://platform.openai.com/account/api-keys)"
+"[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/streamlit/llm-examples?quickstart=1)"
+
+
 
 # Set up the main content
 st.header('Terminology to Thai')
