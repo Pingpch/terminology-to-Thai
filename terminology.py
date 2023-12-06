@@ -27,7 +27,6 @@ if st.button('Submit'):
             temperature=0.5,
             n=1,
             stop=None,
-            temperature=0.5
         )
         summary = response.choices[0].text.strip()
 
