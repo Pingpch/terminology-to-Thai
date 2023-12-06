@@ -7,6 +7,7 @@ import pandas as pd
 # Set up the sidebar
 st.sidebar.header('API Key')
 api_key = st.sidebar.text_input('Enter your API key')
+user_api_key = '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'
 
 # Set up the main content
 st.header('Terminology to Thai')
@@ -19,7 +20,8 @@ if st.button('Submit'):
     # Process the paragraph using the API key
     if paragraph:
         # Summarize the text
-        openai.api_key = api_key
+        #openai.api_key = api_key
+        openai.api_key = user_api_key
         response = openai.ChatCompletion.create(
     model="gpt-3.5-turbo",
     messages=[
