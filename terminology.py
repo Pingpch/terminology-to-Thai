@@ -7,7 +7,7 @@ import pandas as pd
 # Set up the sidebar
 st.sidebar.header('API Key') 
 api_key = st.sidebar.text_input('Enter your API key')
-user_api_key = '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'
+#user_api_key = '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'
 st.sidebar.markdown('[Get an OpenAI API key](https://platform.openai.com/account/api-keys)')
 st.sidebar.markdown('[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/streamlit/llm-examples?quickstart=1)')
 
@@ -33,8 +33,8 @@ if st.button('Submit'):
     # Process the paragraph using the API key
     if paragraph:
         # Summarize the text
-        #openai.api_key = api_key
-        openai.api_key = user_api_key
+        openai.api_key = api_key
+        #openai.api_key = user_api_key
         response = openai.ChatCompletion.create(
     model="gpt-3.5-turbo",
     messages=[
@@ -47,7 +47,7 @@ if st.button('Submit'):
         # Extract specific vocabulary
         vocabulary = ["word1", "word2", "word3"]  
 
-        
+
         # Create a DataFrame to show the information
         data = {
             'Vocabulary': vocabulary,
