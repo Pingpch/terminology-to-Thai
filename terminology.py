@@ -16,7 +16,11 @@ st.sidebar.markdown('[![Open in GitHub Codespaces](https://github.com/codespaces
 
 
 # Set up the main content
-st.header('Terminology to Thai')
+st.header('Terminology to Thai') 
+
+# Change font using CSS styling
+st.markdown('<style>body { font-family: Arial, sans-serif; }</style>', unsafe_allow_html=True)
+
 
 # Create a text box for the client to submit the paragraph
 paragraph = st.text_area('Enter the paragraph')
