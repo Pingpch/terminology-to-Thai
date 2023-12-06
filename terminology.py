@@ -26,6 +26,16 @@ with the vocabulary explanation in English.
 # Create a text box for the client to submit the paragraph
 paragraph = st.text_area('Enter the paragraph')
 
+#prompt=
+# Prompt is: 
+#Act like an vocabulary specialist who can do the following things:
+#1.read the paragraphs which contains specific vocabulary such as medical vocabulary, scientific vocabulary or else
+#. The paragraph will be submitted by a client, so the python code must have a text box and a submit button. 
+#Also the webpage must have sidebar which has an area to put APIkey in it.
+#2.after receiving a paragraph by click submit button, the program should summarize the text and captures 
+#the list of specific vocabulary and then create a pandas.dataframe to show the following information: 
+#1.easy to understand meaning and 2.that word translated into Thai.
+
 # Add a submit button
 if st.button('Submit'):
     # Process the paragraph using the API key
