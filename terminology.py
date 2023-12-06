@@ -45,8 +45,9 @@ if st.button('Submit'):
         summary = response.choices[0].text.strip()
 
         # Extract specific vocabulary
-        vocabulary = ["word1", "word2", "word3"]  # Replace with your vocabulary extraction logic
+        vocabulary = ["word1", "word2", "word3"]  
 
+        
         # Create a DataFrame to show the information
         data = {
             'Vocabulary': vocabulary,
