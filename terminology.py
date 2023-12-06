@@ -5,12 +5,13 @@ import pandas as pd
 
 
 # Set up the sidebar
-st.sidebar.header('API Key')
+st.sidebar.header('API Key') 
 api_key = st.sidebar.text_input('Enter your API key')
-user_api_key = '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'
-with st.sidebar:
- "[Get an OpenAI API key](https://platform.openai.com/account/api-keys)"
- "[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/streamlit/llm-examples?quickstart=1)"
+user_api_key = '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'
+st.sidebar.markdown('[Get an OpenAI API key](https://platform.openai.com/account/api-keys)')
+st.sidebar.markdown('[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/streamlit/llm-examples?quickstart=1)')
+
+ 
 
 
 
