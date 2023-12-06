@@ -18,8 +18,11 @@ st.sidebar.markdown('[![Open in GitHub Codespaces](https://github.com/codespaces
 # Set up the main content
 st.header('Terminology to Thai') 
 
-# Change font using CSS styling
-st.markdown('<style>body { font-family: Arial, sans-serif; }</style>', unsafe_allow_html=True)
+# Add a description
+st.markdown('''
+You can paste a paragraph in English and this app will translate the terminology to Thai. Also 
+with the vocabulary explanation in English.
+ ''')
 
 
 # Create a text box for the client to submit the paragraph
