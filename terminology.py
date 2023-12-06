@@ -20,14 +20,13 @@ if st.button('Submit'):
     if paragraph:
         # Summarize the text
         openai.api_key = api_key
-        response = openai.Completion.create(
-            engine="text-davinci-003",
-            prompt=paragraph,
-            max_tokens=100,
-            temperature=0.5,
-            n=1,
-            stop=None,
-        )
+        response = openai.ChatCompletion.create(
+    model="gpt-3.5-turbo",
+    messages=[
+        {"role": "system", "content": "You are a helpful assistant."},
+        {"role": "user", "content": paragraph},
+    ],
+)
         summary = response.choices[0].text.strip()
 
         # Extract specific vocabulary
