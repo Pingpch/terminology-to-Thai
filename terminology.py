@@ -13,8 +13,6 @@ st.sidebar.markdown('[![Open in GitHub Codespaces](https://github.com/codespaces
 
  
 
-
-
 # Set up the main content
 st.header('Terminology to Thai') 
 
@@ -44,21 +42,21 @@ if st.button('Submit'):
 )
         summary = response.choices[0].text.strip()
 
-        # Extract specific vocabulary
-        vocabulary = ["word1", "word2", "word3"]  
-
+        # Extract specific vocabulary 
+        terminology_list = ["word1", "word2", "word3", "word4", "word5", "word6", "word7", "word8"]
+        half_length = len(terminology_list) // 2
+        vocabulary = terminology_list[:half_length]
 
         # Create a DataFrame to show the information
         data = {
             'Vocabulary': vocabulary,
-            'Meaning': ['Meaning 1', 'Meaning 2', 'Meaning 3'],
-            'Translation': ['Translation 1', 'Translation 2', 'Translation 3']
+            'Meaning (English)': ['Meaning 1', 'Meaning 2', 'Meaning 3'],
+            'Meaning (Thai)': ['Translation 1', 'Translation 2', 'Translation 3']
         }
         df = pd.DataFrame(data)
 
         # Display the DataFrame
         st.dataframe(df)
-    else:
         st.warning('Please enter a paragraph before submitting.')
     pass
 
